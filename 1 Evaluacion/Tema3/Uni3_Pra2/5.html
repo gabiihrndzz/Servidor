@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            @font-face {
+                    font-family: 'NunitoXtra';
+                    src: url('Nunito-Black.ttf') format('truetype'); /* Ensure the path is correct */
+                    font-style: normal;
+                }   
+                .titulo{
+                    font-family: 'NunitoXtra', serif; /* Applies the custom font */
+                    text-align: center;
+                    flex-grow: 1; /* Esto permite que el texto ocupe el centro */
+                    font-size: 20px;
+                }
+            body{
+                background-color: lightblue;
+                text-align: center;
+            }
+            .enviar{
+                padding: 5px 15px;
+                border-width: 4px;
+                border-radius: 50px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 15px;
+                color: var(--color-white);
+                transition:
+                    scale 0.25s ease-in, 
+                    opacity 0.25s ease-in, 
+                    filter 0.25s ease-in;}
+                .enviar:hover {
+        transform: scale(1.2); 
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        <h2 class="titulo">Ejercicio 5: Escribe un script para probar algunas de las funciones mostradas debajo, el sript
+            ha de contener al menos tres funciones de cada bloque </h2>
+            <form action="5.php" method="GET">
+                <p>Voy a usar (funciones de variables):<br>is_null, empty, is_int.<br></p>
+                <p>Voy a usar (funciones de cadenas):<br>strlen, explode, strtolower.<br></p>
+                <p>Voy a usar (funciones de array):<br>ksort, array_values, count.<br></p>
+                    <p>Introduzca dos variable, una con un numero y otra vacia</p>
+                    <p><input type="text" name="variable" placeholder="variable"></p>
+                    <p><input type="text" name="variable1" placeholder="variable Vacia"></p>
+                    <p>Introduzca una cadena</p>
+                    <p><input type="text" name="cadena" placeholder="cadena"></p>
+                    <p>Introduzca valores para un array de 2x2</p>
+                    <p><input type="text" name="array1" placeholder="1"></p>
+                    <p><input type="text" name="array2" placeholder="2"></p>
+                    <p><input type="text" name="array3" placeholder="3"></p>
+                    <p><input type="text" name="array4" placeholder="4"></p>                
+                <input class="enviar" type="submit" value="ENVIAR" href="#">
+            </form>
+        </div>
+    </body>
+</html>

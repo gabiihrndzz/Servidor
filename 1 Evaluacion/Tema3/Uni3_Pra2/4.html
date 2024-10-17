@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+            @font-face {
+                    font-family: 'NunitoXtra';
+                    src: url('Nunito-Black.ttf') format('truetype'); /* Ensure the path is correct */
+                    font-style: normal;
+                }   
+                .titulo{
+                    font-family: 'NunitoXtra', serif; /* Applies the custom font */
+                    text-align: center;
+                    flex-grow: 1; /* Esto permite que el texto ocupe el centro */
+                    font-size: 20px;
+                }
+            body{
+                background-color: lightblue;
+                text-align: center;
+            }
+            .enviar{
+                padding: 5px 15px;
+                border-width: 4px;
+                border-radius: 50px;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 15px;
+                color: var(--color-white);
+                transition:
+                    scale 0.25s ease-in, 
+                    opacity 0.25s ease-in, 
+                    filter 0.25s ease-in;}
+                .enviar:hover {
+        transform: scale(1.2); 
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        <h2 class="titulo">4. Escribe una funcion que reciba un array de numeros, y un numero, el limite. La
+            funcion tiene que devolver un nuevo array que contenga solo los elementos del
+            array original menores que el limite </h2>
+            <form action="4.php" method="GET">
+                <p>Introduzca 9 numeros para el array de 3x3</p>
+                <p><input type="text" name="a1" placeholder="1"></p>
+                <p><input type="text" name="a2" placeholder="2"></p>
+                <p><input type="text" name="a3" placeholder="3"></p>
+                <p><input type="text" name="a4" placeholder="4"></p>
+                <p><input type="text" name="a5" placeholder="5"></p>
+                <p><input type="text" name="a6" placeholder="6"></p>
+                <p><input type="text" name="a7" placeholder="7"></p>
+                <p><input type="text" name="a8" placeholder="8"></p>
+                <p><input type="text" name="a9" placeholder="9"></p>
+                <p><input type="text" name="limite" placeholder="Limite"></p>
+                <input class="enviar" type="submit" value="ENVIAR" href="#">
+            </form>
+        </div>
+    </body>
+</html>
