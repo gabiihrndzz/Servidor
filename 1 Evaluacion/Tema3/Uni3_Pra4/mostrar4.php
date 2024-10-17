@@ -1,4 +1,4 @@
-    <?php
+<?php
     /*/*Realice las siguientes operaciones (continuación del ejercicio anterior, dificultad
     media):
      Aplique el método repintar(color) para cambiar el color definido en la
@@ -22,19 +22,19 @@
     */
     include 'vehiculo.php';
 
-    $coche = new Coche ("verde", 1400, 4, 2);
-    echo "Se suben 2 personas de 130 kilos entre los dos";
+    $coche = new Coche ("verde", 1400, 4, 0);
 
     $coche -> anadirPersona(130);
-    echo"<br>". "El nuevo color del coche es: ". $coche->getColor()."<br>";
-    echo "El nuevo peso del coche es: ". $coche->getPeso()."<br>";
+   // echo"<br>". "El nuevo color del coche es: ". $coche->getColor()."<br>";
+   // echo "El nuevo peso del coche es: ". $coche->getPeso()."<br>";
 
     $coche -> repintar("rojo");
-    echo "El nuevo color del coche repintado es: ". $coche->getColor();
-
-    echo"<br>";
+   // echo "El nuevo color del coche repintado es: ". $coche->getColor();
     $coche->anadirCadenasNieve(2);
    // echo "El número de cadenas para la nieve del coche es de: " . $coche->getAnadirCadenasNieve() . "<br>";
+   echo $coche->__toString();
+   echo"<br>";
+   echo"<br>";
 
     $DosRuedas= new DosRuedas ( "negro",120,5);
     $DosRuedas -> anadirPersona (80);
@@ -51,12 +51,9 @@
 
     echo "<br>";
 
-    $camion = new Camion("azul",10000);
-    $camion->setLongitud(10);
-    $camion->setNumeroPuertas(2);
+    $camion = new Camion("azul",10000,2,10);
     $camion->anadirRemolque(5);
     $camion->anadirPersona(80);
 
-    echo " El color del camion es: ". $camion->getColor()."<br>";
-    echo " El peso del camion es: ". $camion->getPeso()."<br>";
+    echo $camion->__toString();
     ?>

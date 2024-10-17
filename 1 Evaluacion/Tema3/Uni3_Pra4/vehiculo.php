@@ -28,7 +28,7 @@ class Vehiculo {
     }
 
     public function __toString() {
-        return "El peso y color del vehículo: " . $this->getPeso() . " kg, " . $this->getColor();
+        return "El peso ". $this->getPeso() ." y color del vehículo: " . $this->getColor() . "<br>";
     }
 
     public function anadirPersona($peso_persona) {
@@ -52,7 +52,7 @@ class CuatroRuedas extends Vehiculo {
     }
 
     public function __toString() {
-        return parent::__toString() . ", Número de puertas: " . $this->numeroPuertas;
+        return parent::__toString() . "Número de puertas: " . $this->numeroPuertas;
     }
 }
 
@@ -98,7 +98,7 @@ class Coche extends CuatroRuedas {
     }
 
     public function __toString() {
-        return parent::__toString() . ", Número de cadenas de nieve: " . $this->numeroCadenasNieve;
+        return parent::__toString() . "<br>Número de cadenas de nieve: " . $this->numeroCadenasNieve;
     }
 }
 
