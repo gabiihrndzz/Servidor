@@ -1,6 +1,10 @@
-<html>
-    <head>
-        <style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Selección</title>
+    <style>
             @font-face {
                     font-family: 'NunitoXtra';
                     src: url('../html/Nunito-Black.ttf') format('truetype'); /* Ensure the path is correct */
@@ -16,7 +20,7 @@
                 background-color: lightblue;
                 text-align: center;
             }
-            .enviar{
+            button{
                 padding: 5px 15px;
                 border-width: 4px;
                 border-radius: 50px;
@@ -30,18 +34,28 @@
                 .enviar:hover {
         transform: scale(1.2); 
             }
-        </style>
-    </head>
-    <body>
-        <div>
-        <h2 class="titulo">RELLENE EL FORMULARIO</h2>
-            <form action="ficheroFormulario.php" method="POST">
-                    <p><input type="text" name="nombre" placeholder="Nombre"></p>
-                    <p><input type="text" name="apellido" placeholder="Apellido"></p>
-                    <p><input type="text" name="edad" placeholder="Edad"></p>
-                    <input type="text" name="email" placeholder="Correo"></p>
-                    <input class="enviar" type="submit" value="ENVIAR" >
-            </form>
-        </div>
-    </body>
+    </style>
+</head>
+<body>
+    <h1>Introduzca su edad: </h1>
+    <form action="ficheroFormulario.php" method="POST">
+        <label>
+            <input type="radio" name="radio" value="14"> Menor de 14 años
+        </label><br>
+        <label>
+            <input type="radio" name="radio" value="15"> Entre 15 y 20 años
+        </label><br>
+        <label>
+            <input type="radio" name="radio" value="21"> Entre 21 y 40 años
+        </label><br>
+        <label>
+            <input type="radio" name="radio" value="41"> Entre 41 y 60 años 
+        </label><br>
+        <label>
+            <input type="radio" name="radio" value="61"> Mayor de 60 años
+        </label><br>
+        <br>
+        <button type="submit" >Enviar</button>
+    </form>
+</body>
 </html>
