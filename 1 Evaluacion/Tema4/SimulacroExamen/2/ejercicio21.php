@@ -24,7 +24,6 @@ session_start();
         .enviar:hover {
             transform: scale(1.2);
         }
-
     </style>
 </head>
 <body>
@@ -32,15 +31,18 @@ session_start();
     if (isset($_SESSION["color"]) && isset($_POST["color"])) {
         if ($_SESSION["color"] == $_POST["color"]) {
             echo "<h1>¡Felicidades, has acertado!</h1>";
-            echo '<a href="index.php"><button class="enviar">Jugar de nuevo</button></a>';
+            echo '<a href="ejercicio2.php"><button class="enviar">Jugar de nuevo</button></a>';
+            session_destroy();
         } else {
             echo "<h1>Incorrecto, fin del juego.</h1>";
-            echo '<a href="index.php"><button class="enviar">Volver a intentar</button></a>';
+            echo '<a href="ejercicio2.php"><button class="enviar">Volver a intentar</button></a>';
+            session_destroy();
         }
-        // Eliminamos el color de la sesión para que no se repita en la próxima jugada
+
+        // Remove the session data to ensure it does not persist across rounds
         unset($_SESSION["color"]);
     } else {
-        echo "<h1>Error: no se recibió el color correctamente.</h1>";
+        echo "<h1>Error: no se recibió el número correctamente.</h1>";
     }
     ?>
 </body>
