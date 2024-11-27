@@ -90,11 +90,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Mostrar los valores introducidos
-    echo "<br>Name: $name <br>";
-    echo "Email: $email <br>";
-    echo "Website: $url <br>";
-    echo "Comment: $comment <br>";
-    echo "Gender: $sexo <br>";
+    echo "<br>Name: $name || $nameErr $nameSuccess <br>";
+    echo "Email: $email || $emailErr $emailSuccess <br>";
+    echo "Website: $url || $urlErr   <br>";
+    echo "Comment: $comment  <br>";
+    echo "Gender: $sexo || $sexoErr $sexoSuccess<br>";
 } else {
 ?>
 
@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-<form action="10.php" method="POST">
+<form action="11.php" method="POST">
     Name: <input type="text" name="name" id="name" value="<?php echo $name; ?>">
     <span class="error"><?php echo $nameErr; ?></span>
     <span class="success"><?php echo $nameSuccess; ?></span><br><br>

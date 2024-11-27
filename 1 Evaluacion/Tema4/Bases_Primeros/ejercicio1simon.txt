@@ -1,0 +1,7 @@
+bdSimon->
+Crear tabla de usuarios. 
+-->
+	campo:Id:autonumerico
+	campo:Us:texto:10
+	campo:Contr:texto10
+	campo:rol:texto10
